@@ -1,0 +1,1 @@
+export const statusJacare = Object.freeze({inicial: 1, durante: 2, bom: 3, medio: 4, ruim: 5});
