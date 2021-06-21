@@ -54,16 +54,19 @@ const BarracaDoBeijoPage = () => {
   return (
     <main className="main-barraca-beijo">
       <JacareComponent status={statusBeijo} />
-      <div className="gauge-container">
-        <GaugeChart
-          id="gauge-chart"
-          nrOfLevels={20}
-          percent={percentualBeijo}
-          colors={['#a83432', '#31d92b']}
-          hideText={true}
-        ></GaugeChart>
-      </div>
+
       <div className="interacao-container">
+        <div className="gauge-container">
+          <GaugeChart
+            id="gauge-chart"
+            nrOfLevels={15}
+            percent={percentualBeijo}
+            colors={['#EFBAB2', '#E52525']}
+            hideText={true}
+            needleColor={'#BDACAC'}
+            needleBaseColor={'#BDACAC'}
+          ></GaugeChart>
+        </div>
         {statusBeijo === statusJacare.inicial && (
           <Botao onClick={iniciarBeijo} status={statusBeijo} />
         )}
