@@ -10,8 +10,8 @@
 .interacao-container { 
   display: flex;
   flex-direction: column;
-  width: 20vw;
   height: 100%;
   align-items: center;
   justify-content: center;
+  margin-left: 60px;
 }

@@ -4,6 +4,7 @@ import JacareComponent from '../components/JacareComponent';
 import './BarracaDoBeijoPage.css';
 import { statusJacare } from '../constantes';
 import Botao from '../components/Botao';
+import BalaoTexto from '../components/BalaoTexto';
 
 const BarracaDoBeijoPage = () => {
   const [statusBeijo, setStatusBeijo] = useState(statusJacare.inicial);
@@ -57,15 +58,20 @@ const BarracaDoBeijoPage = () => {
 
       <div className="interacao-container">
         <div className="gauge-container">
-          <GaugeChart
-            id="gauge-chart"
-            nrOfLevels={15}
-            percent={percentualBeijo}
-            colors={['#EFBAB2', '#E52525']}
-            hideText={true}
-            needleColor={'#BDACAC'}
-            needleBaseColor={'#BDACAC'}
-          ></GaugeChart>
+          {statusBeijo !== statusJacare.durante && (
+            <BalaoTexto status={statusBeijo}></BalaoTexto>
+          )}
+          {statusBeijo !== statusJacare.inicial && (
+            <GaugeChart
+              id="gauge-chart"
+              nrOfLevels={15}
+              percent={percentualBeijo}
+              colors={['#EFBAB2', '#E52525']}
+              hideText={true}
+              needleColor={'#BDACAC'}
+              needleBaseColor={'#BDACAC'}
+            ></GaugeChart>
+          )}
         </div>
         {statusBeijo === statusJacare.inicial && (
           <Botao onClick={iniciarBeijo} status={statusBeijo} />

@@ -1,32 +1,24 @@
 .botao-verde {
   background-color: #92b846;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 48px;
-  display: flex;
-  align-items: center;
   color: #ffffff;
-  text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 24px;
-  border: none;
-  cursor: pointer;
 }
 
 
 .botao-vermelho {
   background-color: #E95F33;
+  color: #ffffff;
+}
+
+.botao {
   font-family: Poppins;
   font-style: normal;
   font-weight: 900;
   font-size: 32px;
   line-height: 48px;
-  display: flex;
-  align-items: center;
-  color: #ffffff;
   text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
   border-radius: 24px;
   border: none;
   cursor: pointer;
+  min-width: 200px;
+  text-align: center;
 }
