@@ -42,8 +42,8 @@ const BarracaDoBeijoPage = () => {
   const beijar = () => {
     clearInterval(timer);
     console.log('Beijo: ' + percentualBeijo);
-    if (percentualBeijo > 0.8) setStatusBeijo(statusJacare.bom);
-    else if (percentualBeijo > 0.6) setStatusBeijo(statusJacare.medio);
+    if (percentualBeijo > 0.85) setStatusBeijo(statusJacare.bom);
+    else if (percentualBeijo > 0.5) setStatusBeijo(statusJacare.medio);
     else setStatusBeijo(statusJacare.ruim);
   };
 
